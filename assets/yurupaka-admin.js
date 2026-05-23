@@ -1,5 +1,5 @@
 (() => {
-  window.YURUPAKA_ADMIN_VERSION = '20260523-events-merge';
+  window.YURUPAKA_ADMIN_VERSION = '20260523-event-rest-save';
   const cfg = window.YURUPAKA_SUPABASE || {};
   const status = document.querySelector('[data-admin-status]');
   const loginBox = document.querySelector('[data-login-form]');
@@ -228,6 +228,23 @@
       const bt = b.starts_at ? new Date(b.starts_at).getTime() : Number.MAX_SAFE_INTEGER;
       return at - bt;
     });
+  }
+  async function restWrite(table, method, payload, query, prefer){
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 8000);
+    try {
+      const url = cfg.url.replace(/\/$/, '') + '/rest/v1/' + encodeURIComponent(table) + (query || '');
+      const headers = {...restHeaders(), 'Content-Type': 'application/json', Prefer: prefer || 'return=representation'};
+      const res = await fetch(url, { method, headers, body: JSON.stringify(payload), signal: controller.signal });
+      const text = await res.text();
+      if(!res.ok) throw new Error('HTTP ' + res.status + ': ' + text.slice(0, 360));
+      return text ? JSON.parse(text) : [];
+    } catch(err){
+      if(err && err.name === 'AbortError') throw new Error(table + ' の保存がタイムアウトしました。');
+      throw err;
+    } finally {
+      clearTimeout(timer);
+    }
   }
   async function restList(table, order, ascending, limit){
     const controller = new AbortController();
@@ -543,13 +560,8 @@
       const keys = Object.keys(patch).filter(k => patch[k] !== undefined);
       if(!keys.length) return { id: savedId };
       setFormStatus(eventStatus, label + 'を保存しています...');
-      const r = await withTimeout(
-        sb.from(eventTable).update(patch).eq('id', savedId).select('id').single(),
-        12000,
-        '開催予定の' + label
-      );
-      if(r.error) throw new Error(label + 'の保存に失敗しました: ' + r.error.message);
-      return r.data || { id: savedId };
+      const rows = await restWrite(eventTable, 'PATCH', patch, '?id=eq.' + encodeURIComponent(savedId), 'return=representation');
+      return (Array.isArray(rows) && rows[0]) || { id: savedId };
     };
     try {
       if(!form.reportValidity()) return;
@@ -566,12 +578,11 @@
       let savedId = savedIdFromEdit;
       let r;
       if(savedId){
-        r = await withTimeout(sb.from(eventTable).update(basePayload).eq('id', savedId).select('id').single(), 12000, '開催予定の基本情報');
+        r = await restWrite(eventTable, 'PATCH', basePayload, '?id=eq.' + encodeURIComponent(savedId), 'return=representation');
       } else {
-        r = await withTimeout(sb.from(eventTable).insert({...basePayload, images: []}).select('id').single(), 12000, '開催予定の基本情報');
-        savedId = r.data?.id || '';
+        r = await restWrite(eventTable, 'POST', {...basePayload, images: []}, '', 'return=representation');
+        savedId = (Array.isArray(r) ? r[0]?.id : r?.id) || '';
       }
-      if(r.error) throw new Error('基本情報の保存に失敗しました: ' + r.error.message);
       if(!savedId) throw new Error('保存IDを取得できませんでした。Supabaseのcalendar_eventsテーブル設定を確認してください。');
 
       await stage('本文', { description: cleanText(fd.get('description'), 2000) }, savedId);
