@@ -28,3 +28,4 @@ jobs:
             **/README.txt
             **/supabase-schema.sql
             **/auth-test.html
+            **/scripts/**

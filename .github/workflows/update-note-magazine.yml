@@ -1,0 +1,25 @@
+name: Update note magazine
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */6 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  update-note:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Fetch note RSS
+        run: node scripts/fetch-note-magazine.cjs
+      - name: Commit note feed
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Update note magazine feed
+          file_pattern: note-magazine.json
