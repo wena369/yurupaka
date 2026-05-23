@@ -1,5 +1,5 @@
 (() => {
-  window.YURUPAKA_ADMIN_VERSION = '20260523-list-timeout-owner';
+  window.YURUPAKA_ADMIN_VERSION = '20260523-rest-lists';
   const cfg = window.YURUPAKA_SUPABASE || {};
   const status = document.querySelector('[data-admin-status]');
   const loginBox = document.querySelector('[data-login-form]');
@@ -198,7 +198,7 @@
     isAdmin = false;
     if(!sb || !user?.email) return;
     const email = user.email.toLowerCase();
-    if(ownerEmails.includes(email)) isAdmin = true;
+    if(ownerEmails.includes(email)){ isAdmin = true; facilitator = { email, name: baseName() || email, profile: '管理者' }; return; }
     try {
       const f = await withTimeout(sb.from('facilitators').select('*').eq('email', email).maybeSingle(), 10000, 'ファシリテーター情報の確認');
       if(!f.error) facilitator = f.data || (ownerEmails.includes(email) ? { email, name: baseName() || email, profile: '管理者' } : null);
@@ -210,44 +210,65 @@
       else if(a.error) console.warn(a.error);
     } catch(err){ console.warn(err); }
   }
+  function restHeaders(){
+    const headers = { apikey: cfg.anonKey, Authorization: 'Bearer ' + (authAccessToken || cfg.anonKey) };
+    return headers;
+  }
+  async function restList(table, order, ascending, limit){
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 5000);
+    try {
+      const params = new URLSearchParams();
+      params.set('select', '*');
+      if(order) params.set('order', order + '.' + (ascending ? 'asc' : 'desc'));
+      if(limit) params.set('limit', String(limit));
+      const url = cfg.url.replace(/\/$/, '') + '/rest/v1/' + encodeURIComponent(table) + '?' + params.toString();
+      const res = await fetch(url, { headers: restHeaders(), signal: controller.signal });
+      const text = await res.text();
+      if(!res.ok) throw new Error('HTTP ' + res.status + ': ' + text.slice(0, 240));
+      return text ? JSON.parse(text) : [];
+    } catch(err){
+      if(err && err.name === 'AbortError') throw new Error(table + ' の読み込みがタイムアウトしました。');
+      throw err;
+    } finally {
+      clearTimeout(timer);
+    }
+  }
   function isMissingTableError(error){ return error && /Could not find the table|schema cache|relation .* does not exist/i.test(error.message || ''); }
   async function loadLists(){
-    if(!sb) return;
+    if(!cfg.url || !cfg.anonKey) return;
     const notices = [];
     if(newsList) newsList.innerHTML = '<p>What\'s New一覧を読み込んでいます...</p>';
     if(eventList) eventList.innerHTML = '<p>開催予定一覧を読み込んでいます...</p>';
     if(blogList) blogList.innerHTML = '<p>ブログ一覧を読み込んでいます...</p>';
+
     try {
-      const news = await withTimeout(sb.from('news_posts').select('*').order('published_at',{ascending:false}).limit(50), 8000, 'What\'s New一覧の読み込み');
-      if(news.error) throw news.error;
-      renderNewsList(news.data || []);
+      const news = await restList('news_posts', 'published_at', false, 100);
+      renderNewsList(news || []);
     } catch(err) {
       notices.push('What\'s New一覧: ' + err.message);
       if(newsList) newsList.innerHTML = '<p>What\'s New一覧を読み込めません: '+esc(err.message)+'</p>';
       console.error(err);
     }
+
     try {
-      const events = await withTimeout(sb.from(eventTable).select('*').order('starts_at',{ascending:true}).limit(50), 8000, '開催予定一覧の読み込み');
-      if(events.error) throw events.error;
-      let eventRows = events.data || [];
-      if(!eventRows.length){ const oldEvents = await withTimeout(sb.from('events').select('*').order('starts_at',{ascending:true}).limit(50), 8000, '旧開催予定一覧の読み込み'); if(!oldEvents.error && oldEvents.data) eventRows = oldEvents.data; }
-      renderEventList(eventRows);
-    } catch(err) {
-      console.warn(err);
+      let eventRows = [];
       try {
-        const oldEvents = await sb.from('events').select('*').order('starts_at',{ascending:true}).limit(50);
-        if(oldEvents.error) throw oldEvents.error;
-        renderEventList(oldEvents.data || []);
-      } catch(oldErr) {
-        notices.push('開催予定一覧: ' + oldErr.message);
-        if(eventList) eventList.innerHTML = '<p>開催予定一覧を読み込めません: '+esc(oldErr.message)+'</p>';
-        console.error(oldErr);
+        eventRows = await restList(eventTable, 'starts_at', true, 100);
+      } catch(newErr) {
+        console.warn(newErr);
+        eventRows = await restList('events', 'starts_at', true, 100);
       }
+      renderEventList(eventRows || []);
+    } catch(err) {
+      notices.push('開催予定一覧: ' + err.message);
+      if(eventList) eventList.innerHTML = '<p>開催予定一覧を読み込めません: '+esc(err.message)+'</p>';
+      console.error(err);
     }
+
     try {
-      const blogs = await withTimeout(sb.from('blog_posts').select('*').order('published_at',{ascending:false}).limit(50), 8000, 'ブログ一覧の読み込み');
-      if(blogs.error) throw blogs.error;
-      renderBlogList(blogs.data || []);
+      const blogs = await restList('blog_posts', 'published_at', false, 100);
+      renderBlogList(blogs || []);
     } catch(err) {
       if(isMissingTableError(err)){
         renderBlogList([]);
@@ -258,7 +279,8 @@
         console.error(err);
       }
     }
-    if(notices.length) setStatus(notices.join(' / ')); else if(user) setStatus(organizerName() + ' としてログイン中です。登録済み一覧を読み込みました。');
+    if(notices.length) setStatus(notices.join(' / '));
+    else if(user) setStatus(organizerName() + ' としてログイン中です。登録済み一覧を読み込みました。');
   }
   function renderNewsList(rows){
     if(!newsList) return;
