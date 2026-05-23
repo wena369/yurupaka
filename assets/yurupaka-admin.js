@@ -1,5 +1,5 @@
 (() => {
-  window.YURUPAKA_ADMIN_VERSION = '20260523-rest-lists';
+  window.YURUPAKA_ADMIN_VERSION = '20260523-events-merge';
   const cfg = window.YURUPAKA_SUPABASE || {};
   const status = document.querySelector('[data-admin-status]');
   const loginBox = document.querySelector('[data-login-form]');
@@ -214,6 +214,21 @@
     const headers = { apikey: cfg.anonKey, Authorization: 'Bearer ' + (authAccessToken || cfg.anonKey) };
     return headers;
   }
+  function mergeRowsById(...groups){
+    const map = new Map();
+    groups.flat().filter(Boolean).forEach(row => {
+      const key = row.id || JSON.stringify(row);
+      map.set(key, {...(map.get(key) || {}), ...row});
+    });
+    return Array.from(map.values());
+  }
+  function sortEvents(rows){
+    return rows.slice().sort((a,b) => {
+      const at = a.starts_at ? new Date(a.starts_at).getTime() : Number.MAX_SAFE_INTEGER;
+      const bt = b.starts_at ? new Date(b.starts_at).getTime() : Number.MAX_SAFE_INTEGER;
+      return at - bt;
+    });
+  }
   async function restList(table, order, ascending, limit){
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), 5000);
@@ -252,14 +267,23 @@
     }
 
     try {
-      let eventRows = [];
+      const eventGroups = [];
+      const eventErrors = [];
       try {
-        eventRows = await restList(eventTable, 'starts_at', true, 100);
+        eventGroups.push(await restList(eventTable, 'starts_at', true, 100));
       } catch(newErr) {
+        eventErrors.push('calendar_events: ' + newErr.message);
         console.warn(newErr);
-        eventRows = await restList('events', 'starts_at', true, 100);
       }
+      try {
+        eventGroups.push(await restList('events', 'starts_at', true, 100));
+      } catch(oldErr) {
+        eventErrors.push('events: ' + oldErr.message);
+        console.warn(oldErr);
+      }
+      const eventRows = sortEvents(mergeRowsById(...eventGroups));
       renderEventList(eventRows || []);
+      if(!eventRows.length && eventErrors.length) notices.push('開催予定一覧: ' + eventErrors.join(' / '));
     } catch(err) {
       notices.push('開催予定一覧: ' + err.message);
       if(eventList) eventList.innerHTML = '<p>開催予定一覧を読み込めません: '+esc(err.message)+'</p>';
