@@ -1,0 +1,2409 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ゆるパカ鑑賞会公式サイト | 感覚共有アートプログラム</title>
+  <meta name="description" content="ゆるパカ鑑賞会公式サイト。心と身体をゆるめて、感性の扉をパカっとひらく。アートを通じて感性・観察力・対話力を育てる感覚共有アートプログラムです。">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://yurupaka.com/">
+  <meta property="og:site_name" content="ゆるパカ鑑賞会公式サイト">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ゆるパカ鑑賞会公式サイト | 感覚共有アートプログラム">
+  <meta property="og:description" content="ゆるパカ鑑賞会公式サイト。心と身体をゆるめて、感性の扉をパカっとひらく。アートを通じて感性・観察力・対話力を育てる感覚共有アートプログラムです。">
+  <meta property="og:url" content="https://yurupaka.com/">
+  <meta property="og:image" content="https://yurupaka.com/assets/hero-art-space.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ゆるパカ鑑賞会公式サイト | 感覚共有アートプログラム">
+  <meta name="twitter:description" content="ゆるパカ鑑賞会公式サイト。心と身体をゆるめて、感性の扉をパカっとひらく。アートを通じて感性・観察力・対話力を育てる感覚共有アートプログラムです。">
+  <meta name="twitter:image" content="https://yurupaka.com/assets/hero-art-space.png">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"ゆるパカ鑑賞会","alternateName":"ゆるパカ鑑賞会公式サイト","url":"https://yurupaka.com/","logo":"https://yurupaka.com/assets/brand-logo.png","description":"心と身体をゆるめて、感性の扉をパカっとひらく感覚共有アートプログラムです。"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"ゆるパカ鑑賞会公式サイト","url":"https://yurupaka.com/","inLanguage":"ja"}</script>
+  <style>
+:root {
+  --ink: #181512;
+  --charcoal: #25201c;
+  --muted: #6d6258;
+  --paper: #fbf7ef;
+  --paper-2: #f3eadc;
+  --ivory: #fffdf8;
+  --line: #ddd0bf;
+  --orange: #ec8a24;
+  --teal: #0b7f86;
+  --green: #557f53;
+  --wine: #9d3d44;
+  --gold: #b98b43;
+  --shadow: 0 24px 70px rgba(42, 31, 21, .14);
+  --serif: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    linear-gradient(90deg, rgba(24,21,18,.04) 1px, transparent 1px),
+    linear-gradient(180deg, #fbf7ef, #f6efe4 48%, #fffdf8);
+  background-size: 84px 84px, auto;
+  font-family: "Yu Gothic", "YuGothic", "Hiragino Sans", "Meiryo", sans-serif;
+  line-height: 1.75;
+}
+
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+p, h1, h2, h3 { overflow-wrap: anywhere; }
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  min-height: 76px;
+  padding: 12px clamp(18px, 4vw, 58px);
+  background: rgba(251, 247, 239, .9);
+  border-bottom: 1px solid rgba(221, 208, 191, .78);
+  backdrop-filter: blur(18px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.brand-mark {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: var(--muted);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.nav a:hover { color: var(--ink); }
+
+.header-cta,
+.primary,
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 11px 18px;
+  border-radius: 999px;
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+.header-cta,
+.primary {
+  color: #fffdf8;
+  background: var(--ink);
+  box-shadow: 0 10px 26px rgba(24, 21, 18, .14);
+}
+
+.secondary {
+  color: var(--ink);
+  background: rgba(255, 253, 248, .72);
+  border: 1px solid var(--line);
+}
+
+.secondary.is-muted {
+  color: var(--muted);
+  background: rgba(255, 253, 248, .5);
+  box-shadow: none;
+}
+
+.launch-strip {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: center;
+  padding: clamp(26px, 4vw, 42px) clamp(20px, 5vw, 72px);
+  color: #fffdf8;
+  background:
+    radial-gradient(circle at 86% 12%, rgba(236, 138, 36, .32), transparent 28%),
+    linear-gradient(135deg, #2b211a, #181512);
+  border-block: 1px solid rgba(239, 176, 101, .28);
+}
+
+.launch-strip p {
+  margin: 0;
+  color: #eadfd0;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.launch-strip strong {
+  display: block;
+  margin: 4px 0 10px;
+  font-size: clamp(30px, 4.4vw, 60px);
+  font-family: var(--serif);
+  line-height: 1.12;
+}
+
+.launch-strip .eyebrow {
+  color: #efb065;
+}
+
+.hero {
+  min-height: calc(100vh - 76px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(390px, .82fr);
+  gap: clamp(34px, 6vw, 86px);
+  align-items: center;
+  padding: clamp(46px, 7vw, 96px) clamp(20px, 5vw, 72px) clamp(36px, 5vw, 70px);
+  background:
+    radial-gradient(circle at 8% 26%, rgba(236, 138, 36, .14), transparent 28%),
+    radial-gradient(circle at 82% 12%, rgba(11, 127, 134, .13), transparent 28%),
+    linear-gradient(135deg, rgba(255, 253, 248, .84), rgba(251, 247, 239, .66));
+}
+
+.hero-copy { max-width: 800px; }
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: var(--teal);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(50px, 7.3vw, 98px);
+  line-height: .98;
+  letter-spacing: 0;
+}
+
+h2 {
+  margin: 0;
+  font-size: clamp(30px, 4.4vw, 58px);
+  line-height: 1.16;
+  letter-spacing: 0;
+}
+
+h3 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.25;
+}
+
+.accent-orange {
+  color: var(--orange);
+}
+
+.lead {
+  max-width: 700px;
+  margin: 28px 0 0;
+  color: #473c34;
+  font-size: clamp(17px, 1.55vw, 21px);
+}
+
+.formula {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 28px;
+  font-size: clamp(18px, 2vw, 28px);
+  font-weight: 900;
+}
+
+.formula span {
+  padding: 8px 14px;
+  background: var(--ivory);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+
+.formula span:last-child {
+  color: var(--ivory);
+  background: var(--teal);
+  border-color: var(--teal);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.hero-panel {
+  position: relative;
+  min-height: 620px;
+  padding: 18px;
+  background: rgba(255, 253, 248, .72);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.hero-panel img {
+  width: 100%;
+  height: 100%;
+  min-height: 580px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.panel-note {
+  position: absolute;
+  left: 34px;
+  right: 34px;
+  bottom: 34px;
+  padding: 22px;
+  color: #fffdf8;
+  background: rgba(24, 21, 18, .82);
+  border: 1px solid rgba(255, 253, 248, .2);
+  border-radius: 8px;
+  backdrop-filter: blur(12px);
+}
+
+.panel-note p {
+  margin: 0 0 4px;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.panel-note span { color: #efe2d2; }
+
+.section {
+  padding: clamp(68px, 9vw, 124px) clamp(20px, 5vw, 72px);
+}
+
+.section-heading {
+  display: grid;
+  grid-template-columns: minmax(240px, .38fr) minmax(0, .62fr);
+  gap: 38px;
+  align-items: end;
+  margin-bottom: 36px;
+}
+
+.thesis-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  color: #493f37;
+  font-size: 18px;
+}
+
+.thesis-grid p,
+.program-copy p,
+.compass-copy p,
+.business-copy p,
+.facilitator-intro p,
+.calendar-copy p,
+.entry p {
+  margin: 0;
+}
+
+.charter {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 38px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.charter div {
+  min-height: 150px;
+  padding: 26px;
+  background: var(--ivory);
+}
+
+.charter strong {
+  display: block;
+  color: var(--orange);
+  font-size: clamp(28px, 4vw, 48px);
+  line-height: 1;
+}
+
+.charter span {
+  display: block;
+  margin-top: 14px;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.founder-message {
+  display: grid;
+  grid-template-columns: minmax(260px, .34fr) minmax(0, .66fr);
+  gap: clamp(32px, 5vw, 70px);
+  align-items: start;
+  background:
+    linear-gradient(135deg, rgba(255,253,248,.96), rgba(243,234,220,.9)),
+    radial-gradient(circle at 18% 12%, rgba(236, 138, 36, .12), transparent 30%);
+  border-block: 1px solid var(--line);
+}
+
+.founder-photo {
+  position: sticky;
+  top: 104px;
+  display: grid;
+  place-items: end center;
+  min-height: 520px;
+  padding: 28px 24px 0;
+  background: linear-gradient(180deg, #efe3d2, #fffdf8);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.founder-photo img {
+  width: min(100%, 420px);
+  max-height: 520px;
+  object-fit: contain;
+  object-position: bottom center;
+}
+
+.founder-copy {
+  max-width: 900px;
+}
+
+.founder-lead {
+  margin: 24px 0 0;
+  color: #3f352e;
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 800;
+  line-height: 1.8;
+}
+
+.founder-body {
+  display: grid;
+  gap: 18px;
+  margin-top: 30px;
+  color: #4b4038;
+  font-size: 17px;
+}
+
+.founder-body p {
+  margin: 0;
+}
+
+.founder-sign {
+  margin: 30px 0 0;
+  color: var(--muted);
+  text-align: right;
+}
+
+.founder-sign strong {
+  color: var(--ink);
+  font-size: 24px;
+}
+
+.program {
+  display: grid;
+  grid-template-columns: minmax(280px, .42fr) minmax(0, .58fr);
+  gap: 42px;
+  align-items: start;
+  color: #fffdf8;
+  background:
+    linear-gradient(135deg, rgba(24,21,18,.95), rgba(42, 36, 30, .94)),
+    url("./assets/real-session-01.jpg") center/cover;
+}
+
+.program-copy {
+  position: sticky;
+  top: 108px;
+}
+
+.program-copy .eyebrow { color: #efb065; }
+.program-copy p { margin-top: 24px; color: #e8dccd; font-size: 18px; }
+
+.process {
+  list-style: none;
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.program-flow {
+  display: grid;
+  gap: 18px;
+}
+
+.program-visual {
+  margin: 0;
+  overflow: hidden;
+  background: rgba(255, 253, 248, .08);
+  border: 1px solid rgba(255, 253, 248, .18);
+  border-radius: 8px;
+}
+
+.program-visual img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.program-visual figcaption {
+  padding: 14px 18px 18px;
+  color: #eadfd0;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.process li {
+  display: grid;
+  grid-template-columns: 64px minmax(120px, .28fr) minmax(0, .72fr);
+  gap: 18px;
+  align-items: center;
+  padding: 22px;
+  background: rgba(255, 253, 248, .08);
+  border: 1px solid rgba(255, 253, 248, .18);
+  border-radius: 8px;
+}
+
+.process span {
+  color: #efb065;
+  font-weight: 900;
+}
+
+.process p {
+  margin: 0;
+  color: #e8dccd;
+}
+
+.program-principles {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.program-principles span {
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 10px;
+  color: #fffdf8;
+  background: rgba(239, 176, 101, .18);
+  border: 1px solid rgba(239, 176, 101, .32);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.compass {
+  display: grid;
+  grid-template-columns: minmax(250px, .34fr) minmax(0, .66fr);
+  gap: 48px;
+  align-items: center;
+  background: var(--ivory);
+  border-block: 1px solid var(--line);
+}
+
+.compass-visual {
+  display: grid;
+  place-items: center;
+  min-height: 420px;
+  background:
+    radial-gradient(circle, rgba(11, 127, 134, .1), transparent 55%),
+    linear-gradient(180deg, #fffdf8, #f3eadc);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.compass-visual img {
+  max-height: 300px;
+  object-fit: contain;
+}
+
+.report-preview {
+  width: min(100%, 520px);
+  display: grid;
+  grid-template-columns: .92fr 1fr;
+  gap: 14px;
+  align-items: center;
+}
+
+.report-preview img {
+  width: 100%;
+  max-height: 390px;
+  object-fit: cover;
+  object-position: top;
+  border: 1px solid rgba(174, 137, 85, .22);
+  border-radius: 8px;
+  box-shadow: 0 18px 40px rgba(40, 29, 18, .12);
+}
+
+.report-preview img:first-child {
+  transform: translateY(18px);
+}
+
+.report-preview img:last-child {
+  transform: translateY(-18px);
+}
+
+.compass-copy p {
+  margin-top: 20px;
+  color: #4b4038;
+  font-size: 18px;
+}
+
+.compass-points,
+.use-list,
+.entry-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.compass-points span,
+.use-list span {
+  padding: 10px 14px;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-weight: 900;
+}
+
+.fees {
+  background: linear-gradient(180deg, #fffdf8, #f3eadc);
+  border-block: 1px solid var(--line);
+}
+
+.fee-board {
+  overflow: hidden;
+  margin-top: 28px;
+  background: rgba(255, 253, 248, .82);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.fee-row {
+  display: grid;
+  grid-template-columns: minmax(0, .52fr) minmax(220px, .28fr) minmax(0, .2fr);
+  gap: 16px;
+  align-items: center;
+  padding: 18px 22px;
+  border-top: 1px solid var(--line);
+}
+
+.fee-row:first-child {
+  border-top: 0;
+}
+
+.fee-row strong {
+  color: var(--ink);
+  font-size: 18px;
+}
+
+.fee-row b {
+  color: var(--teal);
+  font-size: 18px;
+}
+
+.fee-row span {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.outcomes {
+  background: linear-gradient(180deg, #fbf7ef, #f0e5d6);
+}
+
+.outcome-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.outcome-grid article,
+.facilitator-grid article,
+.event-list article {
+  min-height: 300px;
+  padding: 24px;
+  background: rgba(255, 253, 248, .78);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.outcome-grid img {
+  height: 140px;
+  margin-bottom: 18px;
+  object-fit: contain;
+}
+
+.outcome-grid p,
+.facilitator-grid p,
+.event-list p {
+  color: var(--muted);
+}
+
+.testimonials {
+  background: var(--ivory);
+  border-block: 1px solid var(--line);
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.testimonial-grid article {
+  min-height: 250px;
+  padding: 24px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.testimonial-grid span {
+  display: inline-flex;
+  margin-bottom: 18px;
+  padding: 5px 10px;
+  color: var(--wine);
+  background: rgba(157, 61, 68, .08);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.testimonial-grid p {
+  margin: 0;
+  color: #493f37;
+}
+
+.youtube-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: center;
+  margin-top: 18px;
+  padding: 26px;
+  color: #fffdf8;
+  background: var(--charcoal);
+  border-radius: 8px;
+}
+
+.youtube-panel .eyebrow { color: #efb065; }
+.youtube-panel h3 { margin: 0; }
+.youtube-panel p { margin: 10px 0 0; color: #e8dccd; }
+.youtube-panel .secondary { color: var(--ink); background: #fffdf8; }
+.youtube-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
+
+.business {
+  display: grid;
+  grid-template-columns: minmax(0, .48fr) minmax(360px, .52fr);
+  gap: 44px;
+  align-items: center;
+  background: #26302b;
+  color: #fffdf8;
+}
+
+.business .eyebrow { color: #efb065; }
+.business-copy p { margin-top: 22px; color: #e3d8ca; font-size: 18px; }
+.business .use-list span { background: rgba(255, 253, 248, .1); color: #fffdf8; border-color: rgba(255, 253, 248, .2); }
+
+.business-photos {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 14px;
+  align-items: stretch;
+}
+
+.business-photos img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 253, 248, .18);
+}
+
+.business-photos img:first-child { margin-top: 46px; height: 390px; }
+.privacy-photo { filter: saturate(.9) contrast(.96); }
+
+.facilitator-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.facilitator-intro p {
+  color: #493f37;
+  font-size: 18px;
+}
+
+.facilitator-intro img {
+  max-height: 220px;
+  object-fit: contain;
+}
+
+.facilitator-grid,
+.event-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.status {
+  display: inline-flex;
+  margin-bottom: 18px;
+  padding: 5px 10px;
+  color: var(--teal);
+  background: rgba(11, 127, 134, .08);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.facilitator-grid a,
+.event-list a {
+  display: inline-flex;
+  margin-top: 12px;
+  color: var(--teal);
+  font-weight: 900;
+}
+
+.mini-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.mini-tags span {
+  padding: 5px 9px;
+  color: var(--muted);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.event-meta {
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: minmax(280px, .36fr) minmax(0, .64fr);
+  gap: 42px;
+  background: var(--ivory);
+  border-block: 1px solid var(--line);
+}
+
+.calendar-copy p {
+  margin-top: 18px;
+  color: #493f37;
+  font-size: 18px;
+}
+
+.event-list article {
+  min-height: 250px;
+  border-top: 4px solid var(--orange);
+}
+
+.event-list time {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--wine);
+  font-weight: 900;
+}
+
+.proof {
+  background: var(--orange);
+}
+
+.proof .eyebrow { color: var(--ink); }
+
+.proof-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: rgba(24, 21, 18, .24);
+  border: 1px solid rgba(24, 21, 18, .24);
+}
+
+.proof-row div {
+  padding: 34px;
+  background: rgba(255, 253, 248, .78);
+}
+
+.proof-row strong {
+  display: block;
+  font-size: clamp(36px, 5vw, 68px);
+  line-height: 1;
+}
+
+.proof-row span {
+  display: block;
+  margin-top: 12px;
+  font-weight: 900;
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: minmax(0, .58fr) minmax(320px, .42fr);
+  gap: 36px;
+  align-items: center;
+}
+
+.entry p {
+  margin-top: 20px;
+  color: #493f37;
+  font-size: 18px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 28px clamp(20px, 5vw, 72px);
+  color: var(--muted);
+  background: var(--ivory);
+  border-top: 1px solid var(--line);
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--ink);
+}
+
+.footer-links {
+  display: inline-flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.section-actions {
+  margin: -4px 0 28px;
+}
+
+.course-hero {
+  min-height: calc(100vh - 76px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, .74fr);
+  gap: clamp(34px, 6vw, 86px);
+  align-items: center;
+  padding: clamp(54px, 8vw, 112px) clamp(20px, 5vw, 72px);
+  background:
+    radial-gradient(circle at 18% 22%, rgba(236, 138, 36, .16), transparent 30%),
+    radial-gradient(circle at 82% 14%, rgba(11, 127, 134, .12), transparent 30%),
+    linear-gradient(135deg, #fffdf8, #f1e6d6);
+}
+
+.course-hero h1 {
+  margin: 0;
+  max-width: 900px;
+  font-size: clamp(48px, 8vw, 112px);
+  line-height: .98;
+}
+
+.course-hero-badges,
+.merit-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.course-hero-badges span,
+.merit-list span {
+  padding: 10px 14px;
+  background: var(--ivory);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-weight: 900;
+}
+
+.course-hero-visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 520px;
+  padding: 24px;
+  background: rgba(255, 253, 248, .7);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.course-hero-visual img {
+  max-height: 420px;
+  object-fit: contain;
+}
+
+.hero-quote-card {
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+  width: min(330px, calc(100% - 44px));
+  padding: 20px;
+  color: #fffdf8;
+  background: rgba(24, 21, 18, .88);
+  border: 1px solid rgba(255, 253, 248, .18);
+  border-radius: 8px;
+}
+
+.hero-quote-card p {
+  margin: 0 0 8px;
+  font-size: clamp(18px, 2vw, 26px);
+  font-family: var(--serif);
+  font-weight: 900;
+  line-height: 1.45;
+}
+
+.hero-quote-card span {
+  color: #efb065;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .16em;
+}
+
+.course-two-col {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  color: #493f37;
+  font-size: 18px;
+}
+
+.course-two-col p { margin: 0; }
+
+.course-formula {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 36px;
+  font-size: clamp(18px, 2.4vw, 32px);
+  font-weight: 900;
+}
+
+.course-formula span,
+.course-formula strong {
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: var(--ivory);
+  border: 1px solid var(--line);
+}
+
+.course-formula strong {
+  color: var(--ivory);
+  background: var(--teal);
+  border-color: var(--teal);
+}
+
+.course-vision-band {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 32px;
+  overflow: hidden;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.course-vision-band article {
+  padding: 26px;
+  background: rgba(255, 253, 248, .78);
+}
+
+.course-vision-band span,
+.course-models span,
+.cert-flow span,
+.revenue-grid span {
+  color: var(--orange);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+.course-vision-band p {
+  margin: 10px 0 0;
+  font-size: clamp(18px, 2vw, 28px);
+  font-family: var(--serif);
+  font-weight: 900;
+  line-height: 1.55;
+}
+
+.course-experience {
+  background:
+    radial-gradient(circle at 82% 12%, rgba(236, 138, 36, .12), transparent 28%),
+    linear-gradient(180deg, #f6ecdd, #fffdf8);
+}
+
+.session-flow-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 104px minmax(0, 1fr);
+  gap: 0;
+  margin-top: 34px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.session-flow-grid article {
+  padding: clamp(24px, 4vw, 42px);
+  background: rgba(255, 253, 248, .82);
+}
+
+.session-flow-grid article:last-child {
+  color: #fffdf8;
+  background: var(--charcoal);
+}
+
+.session-flow-grid article > span {
+  color: var(--orange);
+  font-size: 42px;
+  font-family: var(--serif);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.session-flow-grid h3 {
+  margin: 12px 0 16px;
+}
+
+.session-flow-grid ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 1.15em;
+  color: #493f37;
+}
+
+.session-flow-grid article:last-child ul {
+  color: #eadfd0;
+}
+
+.ma-panel {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 8px;
+  min-height: 100%;
+  color: var(--charcoal);
+  background: var(--orange);
+}
+
+.ma-panel strong {
+  font-size: 48px;
+  font-family: var(--serif);
+  line-height: 1;
+}
+
+.ma-panel span {
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .2em;
+}
+
+.course-models,
+.cert-flow,
+.revenue-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.course-models article,
+.cert-flow article,
+.revenue-grid article {
+  min-height: 190px;
+  padding: 24px;
+  background: rgba(255, 253, 248, .82);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.course-models h3,
+.cert-flow h3,
+.revenue-grid h3 {
+  margin: 10px 0;
+}
+
+.course-models p,
+.cert-flow p,
+.revenue-grid p,
+.model-note {
+  color: #493f37;
+}
+
+.course-skills,
+.course-merits,
+.recommended,
+.course-faq {
+  background: linear-gradient(180deg, #fbf7ef, #f0e5d6);
+}
+
+.course-card-grid,
+.support-grid,
+.faq-grid,
+.recommended-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.course-card-grid article,
+.support-grid article,
+.faq-grid article,
+.recommended-grid article {
+  min-height: 220px;
+  padding: 24px;
+  background: rgba(255, 253, 248, .78);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.course-card-grid span {
+  color: var(--orange);
+  font-weight: 900;
+}
+
+.senses-lead {
+  max-width: 760px;
+  margin: -12px 0 32px;
+  color: #493f37;
+  font-size: 18px;
+}
+
+.course-card-grid b {
+  display: block;
+  margin: -4px 0 12px;
+  color: var(--teal);
+  font-size: 13px;
+  letter-spacing: .08em;
+}
+
+.course-card-grid p,
+.support-grid p,
+.faq-grid p {
+  color: var(--muted);
+}
+
+.course-total {
+  margin-top: 26px;
+  padding: 28px;
+  text-align: center;
+  color: #fffdf8;
+  background: var(--charcoal);
+  border-radius: 8px;
+}
+
+.course-total p,
+.course-total span {
+  margin: 0;
+  color: #eadfd0;
+}
+
+.course-total strong {
+  display: block;
+  margin: 8px 0;
+  font-size: clamp(34px, 5vw, 64px);
+  line-height: 1;
+}
+
+.course-about,
+.course-instructor {
+  display: grid;
+  grid-template-columns: minmax(0, .62fr) minmax(300px, .38fr);
+  gap: 36px;
+  align-items: start;
+  background: var(--ivory);
+  border-block: 1px solid var(--line);
+}
+
+.course-instructor {
+  grid-template-columns: minmax(260px, .34fr) minmax(0, .66fr);
+}
+
+.course-about-main p,
+.course-instructor p,
+.course-entry p,
+.course-price p {
+  color: #493f37;
+  font-size: 18px;
+}
+
+.course-feature-box {
+  padding: 28px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.curriculum {
+  color: #fffdf8;
+  background: var(--charcoal);
+}
+
+.curriculum .eyebrow { color: #efb065; }
+
+.curriculum-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.curriculum-grid article {
+  padding: 28px;
+  background: rgba(255, 253, 248, .08);
+  border: 1px solid rgba(255, 253, 248, .18);
+  border-radius: 8px;
+}
+
+.day-label {
+  color: #efb065;
+  font-weight: 900;
+}
+
+.curriculum-grid ul {
+  margin: 18px 0 0;
+  padding-left: 1.2em;
+  color: #e8dccd;
+}
+
+.recommended-grid article {
+  min-height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 900;
+}
+
+.recommended-grid article span {
+  color: var(--teal);
+  font-size: 18px;
+  font-family: var(--serif);
+}
+
+.recommended-grid article i {
+  display: block;
+  font-style: normal;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.support { background: var(--ivory); }
+
+.facilitator-compass {
+  background:
+    radial-gradient(circle at 82% 20%, rgba(11, 127, 134, .1), transparent 30%),
+    linear-gradient(180deg, #fffdf8, #f3eadc);
+  border-block: 1px solid var(--line);
+}
+
+.facilitator-points {
+  margin-top: 30px;
+}
+
+.course-price { background: var(--orange); }
+
+.certification {
+  background: var(--ivory);
+  border-top: 1px solid var(--line);
+}
+
+.cert-flow article:nth-child(2) {
+  background: var(--charcoal);
+  color: #fffdf8;
+}
+
+.cert-flow article:nth-child(2) p {
+  color: #eadfd0;
+}
+
+.revenue {
+  color: #fffdf8;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(236, 138, 36, .14), transparent 28%),
+    linear-gradient(135deg, #181512, #342922);
+}
+
+.revenue .section-heading h2,
+.revenue .course-two-col,
+.revenue .course-two-col p {
+  color: #fffdf8;
+}
+
+.revenue .course-two-col p {
+  color: #eadfd0;
+}
+
+.revenue-grid article {
+  background: rgba(255, 253, 248, .08);
+  border-color: rgba(255, 253, 248, .16);
+}
+
+.revenue-grid p,
+.model-note {
+  color: #eadfd0;
+}
+
+.model-note {
+  margin-top: 22px;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.price-card {
+  max-width: 900px;
+  margin-inline: auto;
+  padding: clamp(28px, 5vw, 58px);
+  background: rgba(255, 253, 248, .86);
+  border: 1px solid rgba(24, 21, 18, .18);
+  border-radius: 8px;
+}
+
+.price-main {
+  display: grid;
+  gap: 10px;
+  margin: 24px 0;
+}
+
+.price-before {
+  color: var(--muted);
+  text-decoration: line-through;
+  font-weight: 900;
+}
+
+.price-main strong {
+  font-size: clamp(42px, 7vw, 86px);
+  line-height: 1;
+}
+
+.price-note {
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.member-fee {
+  margin: 28px 0;
+  padding: 22px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.member-fee h3 {
+  margin-bottom: 10px;
+}
+
+.member-fee-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.member-fee-row span {
+  padding: 9px 13px;
+  color: #fffdf8;
+  background: var(--teal);
+  border-radius: 999px;
+  font-weight: 900;
+}
+
+.course-entry {
+  display: grid;
+  grid-template-columns: minmax(0, .6fr) minmax(280px, .4fr);
+  gap: 36px;
+  align-items: center;
+}
+
+.button-reset {
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+.admin-hero {
+  display: grid;
+  grid-template-columns: minmax(0, .62fr) minmax(300px, .38fr);
+  gap: 36px;
+  align-items: center;
+  background: linear-gradient(135deg, #fffdf8, #f1e6d6);
+}
+
+.auth-panel,
+.form-block,
+.my-events,
+.event-detail-card {
+  padding: clamp(24px, 4vw, 38px);
+  background: rgba(255, 253, 248, .86);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.auth-panel p {
+  margin: 0;
+  color: #493f37;
+  font-weight: 900;
+}
+
+.register-section {
+  display: grid;
+  grid-template-columns: minmax(0, .68fr) minmax(300px, .32fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.event-form {
+  display: grid;
+  gap: 18px;
+}
+
+.event-form.is-disabled {
+  opacity: .55;
+  pointer-events: none;
+}
+
+.form-block {
+  display: grid;
+  gap: 16px;
+}
+
+.form-block p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.form-block label,
+.radio-group {
+  display: grid;
+  gap: 7px;
+  color: #493f37;
+  font-weight: 900;
+}
+
+.form-block input,
+.form-block select {
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 12px;
+  color: var(--ink);
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font: inherit;
+}
+
+.radio-group {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.radio-group label,
+.event-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.radio-group input,
+.event-checkbox input {
+  width: auto;
+  min-height: auto;
+}
+
+.time-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.form-submit {
+  margin-top: 8px;
+}
+
+.form-message {
+  min-height: 28px;
+  color: var(--teal);
+  font-weight: 900;
+}
+
+.form-message.is-error {
+  color: var(--wine);
+}
+
+.compact-events {
+  grid-template-columns: 1fr;
+}
+
+.compact-events article {
+  min-height: auto;
+}
+
+.event-detail-section {
+  min-height: calc(100vh - 76px);
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #fffdf8, #f1e6d6);
+}
+
+.event-detail-card {
+  width: min(100%, 920px);
+}
+
+.event-detail-card h1 {
+  font-size: clamp(36px, 5vw, 72px);
+}
+
+.event-detail-list {
+  display: grid;
+  gap: 1px;
+  margin: 28px 0;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.event-detail-list div {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 18px;
+  padding: 16px;
+  background: var(--ivory);
+}
+
+.event-detail-list dt {
+  color: var(--muted);
+  font-weight: 900;
+}
+
+.event-detail-list dd {
+  margin: 0;
+  font-weight: 900;
+}
+
+/* Production polish: refined, warm, gallery-grade visual language. */
+body {
+  background:
+    linear-gradient(90deg, rgba(35, 28, 22, .035) 1px, transparent 1px),
+    linear-gradient(180deg, #f8f2e8 0%, #fffaf2 42%, #f1e5d5 100%);
+  background-size: 96px 96px, auto;
+}
+
+.site-header {
+  background: rgba(255, 250, 242, .86);
+  border-bottom-color: rgba(174, 137, 85, .28);
+}
+
+h1,
+h2,
+.course-vision-band p,
+.hero-quote-card p,
+.course-total strong {
+  font-family: var(--serif);
+  font-weight: 900;
+}
+
+h1,
+h2 {
+  letter-spacing: .01em;
+}
+
+.eyebrow {
+  color: #9a6b2c;
+  letter-spacing: .1em;
+}
+
+.primary,
+.header-cta {
+  background: linear-gradient(135deg, #201812, #473425);
+  border: 1px solid rgba(185, 139, 67, .34);
+  box-shadow: 0 14px 32px rgba(32, 24, 18, .2);
+}
+
+.primary:hover,
+.header-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 38px rgba(32, 24, 18, .24);
+}
+
+.secondary {
+  background: rgba(255, 250, 242, .78);
+  border-color: rgba(174, 137, 85, .32);
+}
+
+.hero,
+.course-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before,
+.course-hero::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  pointer-events: none;
+  border: 1px solid rgba(185, 139, 67, .24);
+  border-radius: 8px;
+}
+
+.hero-copy,
+.course-hero-copy,
+.hero-panel,
+.course-hero-visual {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1,
+.course-hero h1 {
+  color: #1d1712;
+  text-wrap: balance;
+}
+
+.lead,
+.course-about-main p,
+.course-instructor p,
+.course-entry p,
+.course-price p,
+.senses-lead {
+  line-height: 1.95;
+}
+
+.hero-panel,
+.course-hero-visual,
+.founder-photo {
+  background:
+    linear-gradient(145deg, rgba(255, 250, 242, .9), rgba(237, 224, 204, .74));
+  border-color: rgba(174, 137, 85, .34);
+  box-shadow: 0 34px 90px rgba(40, 29, 18, .18);
+}
+
+.hero-panel {
+  padding: 12px;
+}
+
+.hero .hero-panel {
+  min-height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.hero .hero-panel img {
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+  object-position: center;
+  filter: saturate(.9) contrast(1.02);
+}
+
+.panel-note,
+.hero-quote-card {
+  background:
+    linear-gradient(135deg, rgba(30, 22, 16, .92), rgba(64, 47, 33, .88));
+  border-color: rgba(222, 181, 104, .36);
+}
+
+.panel-note p,
+.hero-quote-card p {
+  color: #fff7e9;
+}
+
+.formula span,
+.course-formula span,
+.course-formula strong,
+.course-hero-badges span,
+.merit-list span {
+  border-color: rgba(174, 137, 85, .32);
+  box-shadow: 0 8px 22px rgba(52, 37, 24, .06);
+}
+
+.section {
+  position: relative;
+}
+
+.thesis,
+.course-skills,
+.recommended,
+.course-faq {
+  background:
+    linear-gradient(180deg, rgba(255, 250, 242, .92), rgba(239, 228, 211, .9));
+}
+
+.charter,
+.course-vision-band,
+.event-detail-list {
+  background: rgba(174, 137, 85, .32);
+  border-color: rgba(174, 137, 85, .32);
+}
+
+.charter div,
+.course-vision-band article,
+.course-card-grid article,
+.support-grid article,
+.faq-grid article,
+.recommended-grid article,
+.testimonial-grid article,
+.outcome-grid article,
+.facilitator-grid article,
+.event-list article,
+.course-models article,
+.cert-flow article,
+.revenue-grid article {
+  border-color: rgba(174, 137, 85, .28);
+  background: rgba(255, 250, 242, .82);
+  box-shadow: 0 18px 50px rgba(52, 37, 24, .07);
+}
+
+.course-card-grid article,
+.recommended-grid article,
+.support-grid article,
+.testimonial-grid article,
+.outcome-grid article {
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+.course-card-grid article:hover,
+.recommended-grid article:hover,
+.support-grid article:hover,
+.testimonial-grid article:hover,
+.outcome-grid article:hover {
+  transform: translateY(-3px);
+  border-color: rgba(185, 139, 67, .5);
+  box-shadow: 0 28px 70px rgba(52, 37, 24, .12);
+}
+
+.course-card-grid span,
+.session-flow-grid article > span,
+.charter strong {
+  color: #b8752a;
+}
+
+.program,
+.curriculum,
+.revenue {
+  background:
+    linear-gradient(135deg, rgba(24,21,18,.96), rgba(50, 39, 30, .95)),
+    url("./assets/real-session-01.jpg") center/cover;
+}
+
+.course-total,
+.cert-flow article:nth-child(2) {
+  background:
+    linear-gradient(135deg, #181512, #3a2c21);
+  border: 1px solid rgba(222, 181, 104, .26);
+}
+
+.business-photos img,
+.proof-row img,
+.privacy-photo {
+  filter: saturate(.9) contrast(1.02);
+}
+
+.business-photos,
+.proof-row {
+  position: relative;
+}
+
+.privacy-photo {
+  opacity: .9;
+}
+
+.footer {
+  background: #181512;
+  color: #e9dac4;
+  border-top-color: rgba(222, 181, 104, .24);
+}
+
+.footer a:hover {
+  color: #fff7e9;
+}
+
+@media (max-width: 1120px) {
+  .nav { display: none; }
+  .hero,
+  .course-hero,
+  .launch-strip,
+  .admin-hero,
+  .program,
+  .business,
+  .calendar,
+  .register-section,
+  .course-entry,
+  .entry {
+    grid-template-columns: 1fr;
+  }
+  .hero { min-height: auto; }
+  .program-copy { position: static; }
+  .hero-panel { min-height: 520px; }
+  .hero-panel img { min-height: 480px; }
+}
+
+@media (max-width: 820px) {
+  .section-heading,
+  .thesis-grid,
+  .charter,
+  .founder-message,
+  .course-two-col,
+  .course-vision-band,
+  .session-flow-grid,
+  .course-models,
+  .course-card-grid,
+  .testimonial-grid,
+  .course-about,
+  .curriculum-grid,
+  .recommended-grid,
+  .course-instructor,
+  .support-grid,
+  .cert-flow,
+  .revenue-grid,
+  .faq-grid,
+  .compass,
+  .outcome-grid,
+  .facilitator-intro,
+  .facilitator-grid,
+  .event-list,
+  .proof-row {
+    grid-template-columns: 1fr;
+  }
+  .launch-strip .primary {
+    width: fit-content;
+  }
+  .program-principles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .youtube-panel {
+    grid-template-columns: 1fr;
+  }
+  .process li {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .business-photos { grid-template-columns: 1fr; }
+  .founder-photo {
+    position: static;
+    min-height: 360px;
+  }
+  .course-hero-visual {
+    min-height: 360px;
+  }
+  .ma-panel {
+    min-height: 120px;
+  }
+  .hero-quote-card {
+    position: static;
+    width: 100%;
+    margin-top: 14px;
+  }
+  .business-photos img,
+  .business-photos img:first-child {
+    height: auto;
+    margin-top: 0;
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-header { min-height: 66px; padding-inline: 14px; }
+  .brand span { display: inline; font-size: 13px; }
+  .brand-mark { width: 42px; height: 42px; }
+  .header-cta { min-height: 40px; padding-inline: 14px; }
+  .hero,
+  .course-hero,
+  .section {
+    padding-inline: 16px;
+  }
+  h1 { font-size: clamp(44px, 17vw, 76px); }
+  .hero-panel { min-height: auto; padding: 10px; }
+  .hero-panel img { min-height: 340px; }
+  .panel-note {
+    position: static;
+    margin-top: 10px;
+    color: var(--ink);
+    background: var(--ivory);
+    border-color: var(--line);
+  }
+  .panel-note span { color: var(--muted); }
+  .hero-actions,
+  .entry-actions {
+    flex-direction: column;
+  }
+  .primary,
+  .secondary {
+    width: 100%;
+  }
+  .launch-strip .primary {
+    width: 100%;
+  }
+  .fee-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .program-principles {
+    grid-template-columns: 1fr;
+  }
+  .report-preview {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .report-preview img {
+    max-height: 310px;
+  }
+  .report-preview img:first-child,
+  .report-preview img:last-child {
+    transform: none;
+  }
+  .time-grid,
+  .event-detail-list div {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.dynamic-updates {
+  background: #fffdf8;
+  border-block: 1px solid var(--line);
+}
+.dynamic-updates .section-heading,
+.dynamic-calendar .section-heading {
+  margin-bottom: 24px;
+}
+.dynamic-split {
+  display: grid;
+  gap: clamp(34px, 5vw, 70px);
+}
+
+.dynamic-events-block {
+  padding-top: clamp(12px, 2vw, 20px);
+  border-top: 1px solid var(--line);
+}
+
+.dynamic-events-block .senses-lead {
+  max-width: 820px;
+  margin: 8px 0 18px;
+}
+
+.dynamic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.dynamic-card {
+  min-height: 100%;
+  padding: 18px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.dynamic-card-media,
+.dynamic-card-empty {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  margin-bottom: 14px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #f3eadc;
+}
+.dynamic-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.dynamic-card-empty {
+  display: grid;
+  place-items: center;
+  color: var(--teal);
+  font-weight: 900;
+}
+.dynamic-card h3 { font-size: 20px; }
+.dynamic-card p { color: #493f37; margin: 10px 0; }
+.dynamic-card span,
+.dynamic-card time { color: var(--muted); font-size: 13px; font-weight: 900; }
+.dynamic-card dl { margin: 12px 0 0; display: grid; gap: 6px; }
+.dynamic-card dl div { display: grid; grid-template-columns: 62px 1fr; gap: 8px; }
+.dynamic-card dt { color: var(--teal); font-weight: 900; }
+.dynamic-card dd { margin: 0; color: #493f37; }
+.dynamic-card-action { display: inline-flex; margin-top: 14px; color: var(--teal); font-weight: 900; }
+.dynamic-actions { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
+
+
+
+@media (max-width: 900px) {
+  .dynamic-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .dynamic-updates .section-heading {
+    margin-bottom: 18px;
+  }
+  .dynamic-split {
+    gap: 30px;
+  }
+  .dynamic-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+  .dynamic-card {
+    width: 100%;
+    padding: 16px;
+  }
+  .dynamic-card h3 {
+    font-size: 19px;
+  }
+  .dynamic-card dl div {
+    grid-template-columns: 52px minmax(0, 1fr);
+  }
+  .dynamic-card-media,
+  .dynamic-card-empty {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+</style>
+
+</head>
+<body>
+  <header class="site-header" aria-label="サイトヘッダー">
+    <a class="brand" href="#top" aria-label="ゆるパカ鑑賞会トップへ">
+      <img src="./assets/brand-logo.png" alt="ゆるパカ鑑賞会" class="brand-mark">
+      <span>ゆるパカ鑑賞会</span>
+    </a>
+    <nav class="nav" aria-label="主なメニュー">
+      <a href="#about">思想</a>
+      <a href="#program">プログラム</a>
+      <a href="#compass">感性コンパス</a>
+      <a href="#business">法人向け</a>
+      <a href="#facilitators">ファシリテーター</a>
+      <a href="#whats-new">最新情報</a>
+      <a href="#calendar">開催予定</a>
+      <a href="blog.html">ブログ</a>
+    </nav>
+    <a class="header-cta" href="#entry">相談する</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">感覚共有アートプログラム</p>
+        <h1>AI時代に、<br>人間力をひらく。</h1>
+        <p class="lead">ゆるパカ鑑賞会は、アートを通して「私はこう感じた」を取り戻す対話型プログラムです。知識や正解ではなく、観る力、感じる力、問いを立てる力を育てます。</p>
+        <div class="formula" aria-label="ゆるパカ鑑賞会の考え方">
+          <span>知性</span>
+          <b>×</b>
+          <span>感受性</span>
+          <b>×</b>
+          <span>感性</span>
+          <b>=</b>
+          <span>人間力</span>
+        </div>
+        <div class="hero-actions">
+          <a class="primary" href="#entry">導入・開催を相談する</a>
+          <a class="secondary" href="#calendar">開催予定を見る</a>
+        </div>
+      </div>
+
+      <div class="hero-panel" aria-label="ゆるパカ鑑賞会の概要">
+        <img src="./assets/hero-art-space.png" alt="ゆるパカ鑑賞会を象徴する静かなアート空間">
+        <div class="panel-note">
+          <p>ゆるっと、パカっと。</p>
+          <span>心と身体を「ゆる」めて、感性の扉を「パカ」っとひらく。</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="launch-strip" aria-label="ファシリテーター講座 第一期募集">
+      <div>
+        <p class="eyebrow">FACILITATOR COURSE STARTS LATE JULY 2026</p>
+        <strong>ファシリテーター講座、<br>2026年7月後半〜8月頃スタート。</strong>
+        <p>第一期は2026年7月後半〜8月頃の開講予定です。具体的な日程は、ご参加者の予定に合わせて調整します。</p>
+      </div>
+      <a class="primary" href="/yurupaka-facilitator-course-standalone.html">講座の詳細と相談について</a>
+    </section>
+
+
+    <section id="whats-new" class="section dynamic-updates">
+      <div class="section-heading">
+        <p class="eyebrow">WHAT'S NEW</p>
+        <h2>最新のお知らせと開催予定。</h2>
+      </div>
+      <div class="dynamic-split">
+        <div>
+          <h3>What's New</h3>
+          <div class="dynamic-grid" data-yurupaka-news aria-label="最新のお知らせ"></div>
+        </div>
+        <div id="calendar" class="dynamic-events-block">
+          <h3>直近の開催予定</h3>
+          <p class="senses-lead">開催日、形式、会場、主催者、申込先をこちらに掲載していきます。Zoom開催の場合、会場はZoomとして表示されます。</p>
+          <div class="dynamic-grid" data-yurupaka-events aria-label="直近の開催予定"></div>
+        </div>
+      </div>
+      <div class="dynamic-actions">
+        <a class="secondary" href="admin.html">管理ページ</a>
+      </div>
+    </section>
+
+    <section id="about" class="section thesis">
+      <div class="section-heading">
+        <p class="eyebrow">WHY YURUPAKA</p>
+        <h2>最適解の先にある、<br>人にしか生み出せないものへ。</h2>
+      </div>
+      <div class="thesis-grid">
+        <p>AIは、既存のものを組み合わせ、驚くほど速く最適解を生み出します。だからこそ、これからの人間に求められるのは、まだ形になっていないものを感じ取り、問いを立て、無から有を生み出す力です。</p>
+        <p>ゆるパカ鑑賞会は、アートを前にした対話を通して、その力を静かに育てます。違う見方に出会うこと。言葉になる前の感覚を大切にすること。自分と他者の世界を、少し自由に観られるようになること。</p>
+      </div>
+      <div class="charter" aria-label="ゆるパカ憲章">
+        <div><strong>非評価</strong><span>感じ方に優劣をつけない</span></div>
+        <div><strong>自由解</strong><span>正解を探さず、見方をひらく</span></div>
+        <div><strong>皆主役</strong><span>一人ひとりの感性を場に活かす</span></div>
+      </div>
+    </section>
+
+    <section class="section founder-message">
+      <div class="founder-photo">
+        <img src="./assets/enatsu-profile.png" alt="江夏画廊株式会社 代表 江夏大樹">
+      </div>
+      <div class="founder-copy">
+        <p class="eyebrow">MESSAGE</p>
+        <h2>感性を大切にすることが、人生の見え方を変えていく。</h2>
+        <p class="founder-lead">ゆるパカ鑑賞会は、アートに詳しい人だけのものではありません。むしろ、かつてアートに関心を持てなかった私自身の問いから生まれたプログラムです。</p>
+        <div class="founder-body">
+          <p>父が画廊を営んでいたにもかかわらず、私はもともとアートにほとんど関心がありませんでした。学業も決して得意ではなく、成績はどの教科も「3」を取るのがやっと。そんな私に、感性豊かな父がかけてくれた「お前はいつか、何かを創り上げる人間になる」という言葉だけが、心の支えでした。</p>
+          <p>いくつかの仕事を経験したのち、実際にアートの世界に携わるようになり、アートを愛する方々と交流を重ねる中で、私は次第に人の心に興味を持つようになりました。なぜ、この方々はこんなにも豊かなものの見方ができるのだろう。なぜ、同じ作品を前にしても、これほど多様な世界を受け取ることができるのだろう。その問いを追いかけるうちに、物心ともに豊かに生きる人には、ご自身の感性をとても大切にしているという共通点があることに気づきました。</p>
+          <p>はじまりは、アーティストとクライアントをもっと自然につなぎたいという願いでした。吉田松陰の松下村塾が対話を通して多くの志士を育てたことにもヒントを得ながら、ゆるパカ鑑賞会の原型が生まれました。その後、ニューヨーク近代美術館で発展した対話型鑑賞法や、神経美学の知見にも触れ、独自に「感覚・感受性・感性」に焦点を当てたプログラムへと育ててきました。</p>
+          <p>2010年に江夏画廊株式会社を創業して以来、英国ベストセラー画家マッケンジー・ソープをはじめ、世界各国の現代画家作品を日本で紹介してきました。画廊や全国百貨店での企画展、ビジネスパーソン向けイベント、児童教育など、さまざまな場でアートと人をつなぐ実践を重ねています。</p>
+          <p>この場が、多くの方の可能性をひらき、視野を広げ、視座を高めるきっかけになればと願っています。大人も子どもも、アートが好きな方も、これまで関心がなかった方も。どうぞ一度、ゆるパカ鑑賞会をご体験ください。</p>
+        </div>
+        <p class="founder-sign">江夏画廊株式会社 代表<br><strong>江夏 大樹</strong></p>
+      </div>
+    </section>
+
+    <section id="program" class="section program">
+      <div class="program-copy">
+        <p class="eyebrow">PROGRAM</p>
+        <h2>「私はこう感じた」<br>を、安心して言葉にする。</h2>
+        <p>1枚の絵を見て、感じたことを言葉にし、互いの視点を聴き合います。アートの知識は必要ありません。むしろ、知らないからこそ生まれる新鮮な気づきがあります。</p>
+      </div>
+      <div class="program-flow">
+        <figure class="program-visual">
+          <img src="./assets/yurupaka-session-flow-gpt-image2.png" alt="ゆるパカ鑑賞会のセッション全体像">
+          <figcaption>正解を外し、評価されない安心の中で、観る・書く・話す・聴く・振り返るをめぐらせます。</figcaption>
+        </figure>
+        <ol class="process" aria-label="体験の流れ">
+          <li><span>01</span><strong>ゆるめる</strong><p>緊張をほどき、感覚が動き出す余白をつくる。</p></li>
+          <li><span>02</span><strong>観る</strong><p>作品の中にある色、形、気配、違和感を受け取る。</p></li>
+          <li><span>03</span><strong>言葉にする</strong><p>自分の中に浮かんだことを、短い言葉で分かち合う。</p></li>
+          <li><span>04</span><strong>聴く</strong><p>他者の見方に触れ、世界の見え方を増やす。</p></li>
+          <li><span>05</span><strong>持ち帰る</strong><p>日常や仕事に活かせる、観自在力の芽を育てる。</p></li>
+        </ol>
+        <div class="program-principles" aria-label="ゆるパカ鑑賞会で大切にすること">
+          <span>非評価</span>
+          <span>非正解主義</span>
+          <span>安全優先</span>
+          <span>違い尊重</span>
+          <span>主役交代制</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="compass" class="section compass">
+      <div class="compass-visual">
+        <div class="report-preview" aria-label="ゆるパカ感性コンパスのレポート例">
+          <img src="./assets/compass-report-1.png" alt="ゆるパカ感性コンパスの所見レポート例">
+          <img src="./assets/compass-report-2.png" alt="6つの感性スコアと脳領域マップのレポート例">
+        </div>
+      </div>
+      <div class="compass-copy">
+        <p class="eyebrow">YURUPAKA SENSE COMPASS</p>
+        <h2>希望者には、感性の振り返りレポートを。</h2>
+        <p>ゆるパカ鑑賞会の基本は、アートを囲み、感じたことを分かち合う対話型の鑑賞体験です。セッション中は「非評価」の考え方を大切にし、人と比べたり、正解を探したりすることはありません。</p>
+        <p>そのうえで、ご希望の方にはオプション（振り返り）として「ゆるパカ感性コンパス」をご利用いただけます。これは江夏画廊オリジナルアプリを活用した、テストや診断ではなく自分の感性を振り返るためのレポートです。参加者の同意をいただいたうえでセッションを録音・文字起こしし、発言の中に表れた感性の領域や、その人ならではの素晴らしさを言葉にしてお届けします。</p>
+        <p>目的は評価ではなく、自己成長のための鏡として役立てていただくこと。繰り返すほど、自分の感性の変化や、まだ気づいていなかった魅力を見つめやすくなります。</p>
+        <div class="compass-points">
+          <span>希望者向けオプション（振り返り）</span>
+          <span>江夏画廊オリジナルアプリ</span>
+          <span>録音・文字起こしは同意制</span>
+          <span>評価ではなく振り返り</span>
+          <span>感性領域の可視化</span>
+          <span>強みのフィードバック</span>
+          <span>ひとことメッセージ</span>
+          <span>継続参加による成長記録</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section outcomes">
+      <div class="section-heading">
+        <p class="eyebrow">OUTCOMES</p>
+        <h2>育つのは、アートの知識ではなく、<span class="accent-orange">生きた人間力。</span></h2>
+      </div>
+      <div class="outcome-grid">
+        <article><img src="./assets/inline-6.png" alt=""><h3>問いを立てる力</h3><p>すぐに答えへ向かわず、違和感やひらめきを問いとして扱う。</p></article>
+        <article><img src="./assets/inline-7.png" alt=""><h3>関係性をつくる力</h3><p>異なる見方を否定せず、チームの創造性として活かす。</p></article>
+        <article><img src="./assets/inline-8.png" alt=""><h3>観自在力</h3><p>ものごとを一方向から決めつけず、自由に観る力を高める。</p></article>
+      </div>
+    </section>
+
+    <section class="section testimonials">
+      <div class="section-heading">
+        <p class="eyebrow">VOICE</p>
+        <h2>参加者の声。</h2>
+      </div>
+      <div class="testimonial-grid">
+        <article>
+          <span>大学職員</span>
+          <p>他の人の見方を知る気づきだけでなく、自分が感じたことを言葉にする時間そのものが久しぶりだった、という声をいただいています。日々の感動を流さず、自分の感覚に気づきやすくなる訓練として受け取られました。</p>
+        </article>
+        <article>
+          <span>公務員</span>
+          <p>自分に深く響く絵に出会うことで、人は癒されるのだと感じた、という感想が寄せられました。新しい作品との出会いが、心の奥に届く時間になっています。</p>
+        </article>
+        <article>
+          <span>IT関連企業</span>
+          <p>その人のものの見方が分かることで、他者理解やチームワークにつながると実感された声もあります。普段は口数の少ない人の意外な視点に触れ、組織内の関係性を見直す機会にもなりました。</p>
+        </article>
+        <article>
+          <span>アート活動関係者</span>
+          <p>知識や作者情報をいったん脇に置き、絵そのものと向き合うことで、多様な解釈が自然に生まれる。オンラインツールも活かしながら、一人ひとりの鑑賞の仕方が大切にされる場だった、という声をいただいています。</p>
+        </article>
+      </div>
+      <div class="youtube-panel">
+        <div>
+          <p class="eyebrow">YOUTUBE</p>
+          <h3>動画でも、プログラムの雰囲気をご覧いただけます。</h3>
+          <p>ゆるパカ鑑賞会の背景や、ご参加者が実際に感じたことを動画でも紹介しています。</p>
+        </div>
+        <div class="youtube-actions">
+          <a class="secondary" href="https://www.youtube.com/watch?v=22dNboFakkY">インタビュー動画を見る</a>
+          <a class="secondary" href="https://www.youtube.com/watch?v=5Ak9987NXkQ">ご参加者の感想動画を見る</a>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section id="business" class="section business">
+      <div class="business-copy">
+        <p class="eyebrow">FOR BUSINESS & COMMUNITY</p>
+        <h2>研修、地域イベント、教育、交流企画へ。</h2>
+        <p>一般向けの鑑賞会としてだけでなく、法人研修、自治体・施設での文化企画、学生向けプログラム、ファミリー向け、婚活・交流企画にも展開できます。</p>
+        <div class="use-list">
+          <span>リーダーシップ</span>
+          <span>チームビルディング</span>
+          <span>感性教育</span>
+          <span>心理的安全性</span>
+          <span>地域の居場所づくり</span>
+          <span>世代間交流</span>
+        </div>
+      </div>
+      <div class="business-photos">
+        <img src="./assets/gallery-chairs.jpg" alt="椅子が並んだギャラリー会場">
+        <img src="./assets/session-scene.jpg" alt="鑑賞会の実施風景" class="privacy-photo">
+      </div>
+    </section>
+
+    <section id="facilitators" class="section facilitators">
+      <div class="section-heading">
+        <p class="eyebrow">FACILITATORS</p>
+        <h2>全国で、感性の扉をひらく仲間へ。</h2>
+      </div>
+      <div class="facilitator-intro">
+        <p>2026年より、ゆるパカ鑑賞会ファシリテーター講座を開始予定です。将来的には、各ファシリテーターのプロフィール、開催地域、得意テーマ、イベントリンクを掲載できるようにします。</p>
+        <img src="./assets/relax-yurupaka.png" alt="リラックスしているゆるパカ">
+      </div>
+      <div class="hero-actions section-actions">
+        <a class="primary" href="/yurupaka-facilitator-course-standalone.html">講座案内ページを見る</a>
+      </div>
+      <div class="facilitator-grid" aria-label="ファシリテーター掲載イメージ">
+        <article>
+          <span class="status">掲載準備中</span>
+          <h3>ファシリテーター名</h3>
+          <p>認定後の活動地域、得意テーマ、開催スタイルを紹介していきます。</p>
+          <a href="/yurupaka-facilitator-course-standalone.html">講座案内を見る</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section proof">
+      <p class="eyebrow">TRACK RECORD</p>
+      <div class="proof-row">
+        <div><strong>15年</strong><span>積み重ねてきた実践</span></div>
+        <div><strong>200回以上</strong><span>リアル・オンラインで開催</span></div>
+        <div><strong>法人開催</strong><span>東京ミッドタウン八重洲などで実施</span></div>
+      </div>
+    </section>
+
+    <section id="fees" class="section fees">
+      <div class="section-heading">
+        <p class="eyebrow">SESSION FEE</p>
+        <h2>ゆるパカ鑑賞会のご参加費目安。</h2>
+      </div>
+      <p class="senses-lead">基本目安です。コラボ会など、開催条件・会場・企画内容により前後します。</p>
+      <div class="fee-board" aria-label="ゆるパカ鑑賞会の参加費目安">
+        <div class="fee-row"><strong>通常セッション（リアル・Zoom）</strong><b>3,000円〜4,000円（税込）／一人</b><span>基本開催</span></div>
+        <div class="fee-row"><strong>お茶会付きセッション（リアル）</strong><b>4,000円〜5,000円（税込）／一人</b><span>交流込み</span></div>
+        <div class="fee-row"><strong>食事会付きセッション</strong><b>都度ご案内</b><span>会場・内容により調整</span></div>
+        <div class="fee-row"><strong>感性コンパス（PDFデータでお渡し）</strong><b>500円（税込）／一人</b><span>ご希望者のみ</span></div>
+        <div class="fee-row"><strong>アーティスト参加特別会</strong><b>＋1,000円（税込）／一人</b><span>特別企画</span></div>
+      </div>
+    </section>
+
+    <section id="entry" class="section entry">
+      <div>
+        <p class="eyebrow">CONTACT</p>
+        <h2>開催、研修、コラボレーションのご相談へ。</h2>
+        <p>一般開催、法人研修、自治体・施設での企画、ファシリテーター講座、ゆるパカ感性コンパスの活用について、お気軽にご相談ください。</p>
+      </div>
+      <div class="entry-actions">
+        <a class="primary" href="https://enartsu.co.jp/contact/" target="_blank" rel="noopener">江夏画廊へ相談する</a>
+        <a class="secondary" href="/yurupaka-facilitator-course-standalone.html">講座案内を見る</a>
+        <span class="secondary is-muted">LINE 準備中</span>
+        <span class="secondary is-muted">Peatix 準備中</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>ゆるパカ鑑賞会</span>
+    <span class="footer-links">
+      <a href="https://enartsu.co.jp/" target="_blank" rel="noopener">江夏画廊</a>
+      <a href="law.html">特定商取引法に基づく表記</a>
+      <span>© Yurupaka.com</span>
+    </span>
+  </footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/supabase-config.js"></script>
+  <script src="assets/yurupaka-site.js"></script>
+</body>
+</html>
