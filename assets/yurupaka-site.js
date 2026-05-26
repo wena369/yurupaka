@@ -35,19 +35,19 @@
   }
   function renderNews(target, data){ const items = data && data.length ? data : fallbackNews; target.innerHTML = items.map(item => '<article class="dynamic-card"><a href="/news-detail.html?id='+encodeURIComponent(item.id)+'"><div class="dynamic-card-media">'+media(item.images,item.title)+'</div><h3>'+esc(item.title)+'</h3></a><p>'+esc(item.excerpt || item.body || '').slice(0,96)+'</p><span>'+esc(item.organizer_name || item.author_email || 'ゆるパカ鑑賞会')+'</span></article>').join(''); }
   function renderEvents(target, data){ const items = data && data.length ? data : fallbackEvents; target.innerHTML = items.map(item => { const isZoom = String(item.session_format || '').toLowerCase().includes('zoom'); const venue = isZoom ? 'Zoom' : (item.venue_name || '会場調整中'); const address = item.venue_address || item.address || ''; const map = !isZoom && address ? '<a href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(address)+'" target="_blank" rel="noopener">Googleマップ</a>' : ''; const signup = item.signup_url ? '<a class="dynamic-card-action" href="'+esc(item.signup_url)+'" target="_blank" rel="noopener">申込ページへ</a>' : ''; return '<article class="dynamic-card event-card"><div class="dynamic-card-media">'+media(item.images,item.title)+'</div><time>'+esc(dt(item.starts_at))+'</time><h3>'+esc(item.title)+'</h3><p>'+esc(item.description || '')+'</p><dl><div><dt>形式</dt><dd>'+esc(item.session_format || '未定')+'</dd></div><div><dt>会場</dt><dd>'+esc(venue)+'</dd></div>'+(!isZoom && address ? '<div><dt>住所</dt><dd>'+esc(address)+' '+map+'</dd></div>' : '')+'<div><dt>主催</dt><dd>'+esc(item.organizer_name || item.organizer_email || 'ゆるパカ鑑賞会')+'</dd></div></dl>'+signup+'</article>'; }).join(''); }
-  function actionButton(target, href){ if(!target) return; target.innerHTML = '<a class="secondary" href="'+href+'">その他を見る</a>'; }
+  function actionButton(target, href){ if(!target) return; target.innerHTML = '<a class="secondary" href="'+href+'">一覧を表示する</a>'; }
   async function initHome(){
     const ns = document.querySelectorAll('[data-yurupaka-news]');
     const es = document.querySelectorAll('[data-yurupaka-events]');
     if(!ns.length && !es.length) return;
+    actionButton(document.querySelector('[data-news-more]'), 'news-list.html');
+    actionButton(document.querySelector('[data-events-more]'), 'events-list.html');
     try {
       const [news, eventsAll] = await Promise.all([ns.length ? getNews(100) : null, es.length ? getEvents(100) : null]);
       const now = Date.now();
       const upcoming = (eventsAll || []).filter(item => dateValue(item.starts_at, 0) >= now).sort((a,b) => dateValue(a.starts_at, Number.MAX_SAFE_INTEGER) - dateValue(b.starts_at, Number.MAX_SAFE_INTEGER));
       ns.forEach(el => renderNews(el, (news || []).slice(0,3)));
       es.forEach(el => renderEvents(el, upcoming.slice(0,3)));
-      actionButton(document.querySelector('[data-news-more]'), 'news-list.html');
-      actionButton(document.querySelector('[data-events-more]'), 'events-list.html');
     } catch(e){ console.warn(e); ns.forEach(el => renderNews(el, [])); es.forEach(el => renderEvents(el, [])); }
   }
   async function initNewsList(){ const target = document.querySelector('[data-yurupaka-news-list]'); if(!target) return; try { const news = await getNews(100); renderNews(target, news); } catch(e){ console.warn(e); renderNews(target, []); } }
